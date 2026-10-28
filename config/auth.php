@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Member;
+
 return [
 
     /*
@@ -38,7 +40,7 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'members',
         ],
     ],
 
@@ -60,9 +62,9 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'members' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Models\Member::class,
         ],
 
         // 'users' => [
